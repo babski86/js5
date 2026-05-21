@@ -55,3 +55,24 @@ container.addEventListener("click", (e) => {
     card.remove();
   }
 });
+// esaa meore varianti
+// container.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("seeMoreDetails")) {
+//     const card = e.target.closest(".mainCard");
+//     const title = card.querySelector(".title");
+
+//     if (title.textContent === "") {
+//       const id = e.target.dataset.id;
+//       const result = results.find((item) => item.id === id);
+//       title.textContent = result.longTitle;
+//     } else {
+//       title.textContent = "";
+//     }
+//   }
+// });
+// container.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("removeCard")) {
+//     const card = e.target.closest(".mainCard");
+//     card.remove();
+//   }
+// });
