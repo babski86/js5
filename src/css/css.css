@@ -1,1 +1,5 @@
 @import "tailwindcss";
+.my-link {
+  color: blue !important;
+  text-decoration: underline !important;
+}

@@ -25,7 +25,9 @@ function card() {
       <div class="mainCard border p-4 rounded-lg bg-white shadow-md">
         <img src="${e.webImage.url}" alt="img" class="w-full h-auto object-cover rounded"/> 
         <h2 class="text-xl font-bold mt-2">${e.title}</h2>
-        <p class="text-sm text-gray-600 hidden">${e.longTitle}</p></p>
+        <p class="text-sm text-gray-600 hidden">${e.longTitle} </br>for more info visit 
+       <a href="${e.links.web}" target="_blank" class="my-link" >here</a>
+         </p>
         <div class="mt-5 flex gap-2">
           <button class="seeMoreDetails bg-blue-500 text-white p-2 rounded text-xs">see more details</button>
           <button class="removeCard bg-red-500 text-white p-2 rounded text-xs">remove card</button>
@@ -42,7 +44,7 @@ butImg.addEventListener("click", card, { once: true });
 container.addEventListener("click", (e) => {
   if (e.target.classList.contains("seeMoreDetails")) {
     const card = e.target.closest(".mainCard");
-    const title = card.querySelector("p");
+    const title = card.querySelector(".hidden");
     title.classList.toggle("hidden");
     if (title.classList.contains("hidden")) {
       e.target.textContent = "see more details";
